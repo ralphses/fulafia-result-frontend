@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const STUDENT_BASE_URL = "https://fulafia-result-backend-production.up.railway.app/api/v1/student"
-const ADD_STUDENT_URI = "/add";
 
 class StudentService {
 
@@ -10,4 +9,5 @@ class StudentService {
     }
 
 }
-export default new StudentService();
+const studentService = new StudentService(); 
+export default  studentService;

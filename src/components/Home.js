@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router";
 
 function Home() {
-  const navigate = useNavigate();
 
   return (
     <div className="container font-bold px-4 mx-auto sm:px-8 min-h-screen flex flex-col">

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import DepartmentService from "../../services/DepartmentService";
 import CourseService from "../../services/CourseService";
 import { useNavigate } from "react-router";
-import { all } from "axios";
 
 function AddDeprtment() {
   const [allCourses, setAllCourses] = useState([]);

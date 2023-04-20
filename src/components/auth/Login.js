@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import AuthService from "../../services/AuthService";
-import { useNavigate } from "react-router";
+import authService from "../../services/AuthService";
 
 const Login = () => {
 
-  const navigate = useNavigate();
 
   const [loginRequest, setLoginRequest] = useState({
     email: "",
@@ -19,7 +17,7 @@ const Login = () => {
   const loginAdmin = (e) => {
     e.preventDefault();
 
-    AuthService.login(loginRequest).then((response) => {
+    authService.login(loginRequest).then((response) => {
 
       if(response.status === 200 && response.data.responseBody.status) {
         localStorage.setItem("loogedIn", response.data.responseBody.status);

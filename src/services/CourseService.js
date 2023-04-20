@@ -15,4 +15,5 @@ class CourseService {
 
 }
 
-export default new CourseService();
+const courseService = new CourseService();
+export default courseService;

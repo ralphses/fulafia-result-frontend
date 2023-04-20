@@ -80,7 +80,7 @@ function AllDepartment() {
                 </tr>
               </thead>
               <tbody>
-                {allDepartments.map((dept, index) => (
+                {loading && allDepartments.map((dept, index) => (
                   <tr key={dept.code}>
                     <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
                       <div className="flex items-center">
