@@ -25,7 +25,7 @@ function AddStudent() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/course/all/1"
+          "https://fulafia-result-backend-production.up.railway.app/api/v1/course/all/1"
         );
         const courses = response.data.responseBody.courses.map(
           (course) => course.code
@@ -39,7 +39,7 @@ function AddStudent() {
     const fetchDepartments = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/department/1"
+          "https://fulafia-result-backend-production.up.railway.app/api/v1/department/1"
         );
         setAllDepartments(response.data);
       } catch (error) {
@@ -56,7 +56,7 @@ function AddStudent() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/student/add",
+        "https://fulafia-result-backend-production.up.railway.app/api/v1/student/add",
         student
       );
       if (response.status === 200) {

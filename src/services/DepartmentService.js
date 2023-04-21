@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const DEPARTMENT_BASE_API_URL = "http://localhost:8080/api/v1/department"
+const DEPARTMENT_BASE_API_URL = "https://fulafia-result-backend-production.up.railway.app/api/v1/department"
 const ADD_DEPARTMENT_API_URI = "/new"
 
 class DepartmentService {
