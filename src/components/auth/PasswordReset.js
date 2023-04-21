@@ -17,7 +17,7 @@ function PasswordReset() {
 
     try {
       const response = await axios.put(
-        "https://fulafia-result-backend-production.up.railway.app/api/v1/auth/password-reset",
+        "http://localhost:8080/api/v1/auth/password-reset",
         passwordResetModel
       );
       if (response.status === 200) {
@@ -32,7 +32,7 @@ function PasswordReset() {
 
   return (
     <div className="items-center justify-center mt-20 min-h-screen flex flex-col">
-      <div class="flex flex-col w-full flex-grow px-4 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
+      <div class="flex flex-col w-full flex-grow px-2 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
         <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
           Reset Your Password
         </div>

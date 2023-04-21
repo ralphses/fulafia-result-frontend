@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const COURSE_BASE_API_URL = "https://fulafia-result-backend-production.up.railway.app/api/v1/course"
+const COURSE_BASE_API_URL = "http://localhost:8080/api/v1/course"
 const ADD_COURSE_URI = "add"
 
 class CourseService {

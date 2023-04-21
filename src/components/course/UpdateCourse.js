@@ -3,7 +3,7 @@ import React from "react";
 function UpdateCourse() {
   return (
     <div className="container font-bold px-4 mx-auto sm:px-8 min-h-screen flex flex-col">
-      <div className="py-10 px-20 flex-grow">
+      <div className="py-10 px-2 flex-grow">
         <div class="self-center text-xl font-light text-gray-800 sm:text-2xl dark:text-white">
           Update Course
         </div>

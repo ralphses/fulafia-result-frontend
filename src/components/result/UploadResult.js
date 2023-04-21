@@ -26,7 +26,7 @@ function UploadResult() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          `https://fulafia-result-backend-production.up.railway.app/api/v1/student/find/${value}`
+          `http://localhost:8080/api/v1/student/find/${value}`
         );
         if (response.status === 200) {
           setLoaded(true);
@@ -102,7 +102,7 @@ function UploadResult() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://fulafia-result-backend-production.up.railway.app/api/v1/result/add",
+        "http://localhost:8080/api/v1/result/add",
         studentResult
       );
       if (response.status === 200) {
@@ -115,7 +115,7 @@ function UploadResult() {
 
   return (
     <div className="flex items-center justify-center mt-20">
-      <div className="flex flex-col max-w-lg w-3/4 px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+      <div className="flex flex-col max-w-lg w-3/4 px-2 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
         <div className="self-center text-xl font-bold text-gray-800 sm:text-2xl dark:text-white">
           Upload Student Result
         </div>
@@ -127,7 +127,7 @@ function UploadResult() {
                 <input
                   type="text"
                   id="create-account-pseudo"
-                  className=" rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent"
+                  className="rounded-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-gray-800 focus:border-transparent"
                   name="matric"
                   value={matric}
                   onFocus={focused}
@@ -201,7 +201,7 @@ function UploadResult() {
               <button
                 type="submit"
                 onClick={(e) => saveStudentResult(e)}
-                className="py-2 px-4  bg-gray-500 hover:bg-gray-800  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                className="py-2 px-4  bg-yellow-700 hover:bg-white hover:text-yellow-700  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
               >
                 Upload Result
               </button>

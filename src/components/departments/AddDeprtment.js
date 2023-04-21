@@ -75,7 +75,7 @@ function AddDeprtment() {
 
   return (
     <div className="flex items-center justify-center mt-20">
-      <div className="flex flex-col max-w-lg w-3/4 px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+      <div className="flex flex-col max-w-lg w-3/4 px-2 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
         <div className="self-center text-xl font-bold text-gray-800 sm:text-2xl dark:text-white">
           Add New Department
         </div>

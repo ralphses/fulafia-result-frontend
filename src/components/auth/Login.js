@@ -32,7 +32,7 @@ const Login = () => {
   return (
 
     <div className="items-center justify-center mt-20 min-h-screen flex flex-col">
-      <div class="flex flex-col w-full flex-grow px-4 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
+      <div class="flex flex-col w-full flex-grow px-2 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
         <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
           Admin Login
         </div>

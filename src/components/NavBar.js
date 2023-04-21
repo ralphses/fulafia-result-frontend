@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import logo from "../ful3.png";
 // Initialization for ES Users
 import { Collapse, Ripple, initTE } from "tw-elements";
 
@@ -8,20 +9,25 @@ function Navbar() {
   const navigate = useNavigate();
 
   const logout = () => {
-    localStorage.removeItem("loogedIn")
+    localStorage.removeItem("loogedIn");
     navigate("/login");
-    
-  }
+  };
 
   const isLoggedIn = localStorage.getItem("loogedIn");
 
   return (
     <nav
-      class="relative flex w-full items-end justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+      class="relative flex w-full items-end justify-between bg-yellow-700 py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
       data-te-navbar-ref
     >
-      <div class="flex w-full flex-wrap items-end justify-between px-3">
-        <div class="flex items-end">
+      <div class="flex w-full flex-wrap text-white items-end justify-between px-3">
+        <div className="flex items-center flex-shrink-0 text-white mr-20">
+          <img src={logo} alt="Logo" className="bg-white rounded-full px-1 py-1 h-12 w-12 mr-2" />
+          <span className="font-semibold text-white tracking-tight">
+            FEDERAL UNIVERSITY OF LAFIA
+          </span>
+        </div>
+        <div class="float-right">
           <button
             class="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
             type="button"

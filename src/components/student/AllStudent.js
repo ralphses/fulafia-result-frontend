@@ -34,14 +34,14 @@ function AllStudent() {
   }, []);
 
   return (
-    <div className="container font-bold px-4 mx-auto sm:px-8 min-h-screen flex flex-col">
-      <div className="py-10 px-20 flex-grow">
+    <div className="container font-bold px-2 mx-auto sm:px-8 min-h-screen flex flex-col">
+      <div className="py-10 px-2 flex-grow">
         <div className="self-center text-center text-xl font-bold text-gray-800 sm:text-2xl dark:text-white">
           All Registered Students
         </div>
         <div className="h-12">
           <button
-            className="rounded bg-slate-700 text-white py-2 px-2"
+            className="rounded bg-yellow-700 text-white py-2 px-2"
             onClick={() => navigate("/student/add")}
           >
             Add New Student
@@ -53,12 +53,6 @@ function AllStudent() {
               {/* <table className="table-auto min-w-full leading-normal"> */}
               <thead>
                 <tr>
-                  <th
-                    scope="col"
-                    className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
-                  >
-                    S/N
-                  </th>
                   <th
                     scope="col"
                     className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
