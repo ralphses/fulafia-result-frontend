@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 function AddStudent() {
   const [allCourses, setAllCourses] = useState([]);
@@ -25,7 +26,7 @@ function AddStudent() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          "https://fulafia-result-backend-production.up.railway.app/api/v1/course/all/1"
+          `http://localhost:8080/api/v1/course/all/1?department=${student.department}`
         );
         const courses = response.data.responseBody.courses.map(
           (course) => course.code
@@ -39,7 +40,7 @@ function AddStudent() {
     const fetchDepartments = async () => {
       try {
         const response = await axios.get(
-          "https://fulafia-result-backend-production.up.railway.app/api/v1/department/1"
+          "http://localhost:8080/api/v1/department/1"
         );
         setAllDepartments(response.data);
       } catch (error) {
@@ -56,11 +57,15 @@ function AddStudent() {
 
     try {
       const response = await axios.post(
-        "https://fulafia-result-backend-production.up.railway.app/api/v1/student/add",
+        "http://localhost:8080/api/v1/student/add",
         student
       );
       if (response.status === 200) {
-        navigate("/student");
+        const responseData = response.data.responseBody.student;
+
+        const successUrl = `/student/add/success?name=${responseData.name}&matric=${responseData.matric}&resultCode=${responseData.resultCode}&passCode=${responseData.passCode}`;
+
+        navigate(successUrl);
       }
     } catch (error) {
       console.log(error);
@@ -131,7 +136,7 @@ function AddStudent() {
                   name="phone"
                   value={student.phone}
                   onChange={studentDetailsChange}
-                  placeholder="Phone Number"
+                  placeholder="Phone Number (e.g +2347011111111)"
                 />
               </div>
             </div>
