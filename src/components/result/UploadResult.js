@@ -26,7 +26,7 @@ function UploadResult() {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/v1/student/find/${value}`
+          `fulafia-result-backend-production.up.railway.app/api/v1/student/find/${value}`
         );
         if (response.status === 200) {
           setLoaded(true);
@@ -102,7 +102,7 @@ function UploadResult() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/result/add",
+        "fulafia-result-backend-production.up.railway.app/api/v1/result/add",
         studentResult
       );
       if (response.status === 200) {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const LOGIN_API = "http://localhost:8080/api/v1/auth/login"
+const LOGIN_API = "fulafia-result-backend-production.up.railway.app/api/v1/auth/login"
 
 class AuthService {
 
