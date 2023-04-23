@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const STUDENT_BASE_URL = "fulafia-result-backend-production.up.railway.app/api/v1/student"
+const STUDENT_BASE_URL = "https://fulafia-result-backend-production.up.railway.app/api/v1/student"
 
 class StudentService {
 

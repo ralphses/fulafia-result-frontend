@@ -17,7 +17,7 @@ function PasswordReset() {
 
     try {
       const response = await axios.put(
-        "fulafia-result-backend-production.up.railway.app/api/v1/auth/password-reset",
+        "https://fulafia-result-backend-production.up.railway.app/api/v1/auth/password-reset",
         passwordResetModel
       );
       if (response.status === 200) {
