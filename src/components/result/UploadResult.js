@@ -44,7 +44,7 @@ function UploadResult() {
         }
       } catch (error) {
         setLoaded(false);
-        console.log(error);
+        //console.log(error);
       }
     };
     fetchCourses();
@@ -109,7 +109,7 @@ function UploadResult() {
         navigate("/");
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 

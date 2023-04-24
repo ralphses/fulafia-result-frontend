@@ -24,23 +24,23 @@ function PasswordReset() {
         window.location.href = "/login";
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 
-  console.log(passwordResetModel);
+  //console.log(passwordResetModel);
 
   return (
     <div className="items-center justify-center mt-20 min-h-screen flex flex-col">
-      <div class="flex flex-col w-full flex-grow px-2 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
-        <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
+      <div className="flex flex-col w-full flex-grow px-2 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
+        <div className="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
           Reset Your Password
         </div>
-        <div class="mt-8">
+        <div className="mt-8">
           <form action="#" autoComplete="off">
-            <div class="flex flex-col mb-2">
-              <div class="flex relative ">
-                <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+            <div className="flex flex-col mb-2">
+              <div className="flex relative ">
+                <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                   <svg
                     width="15"
                     height="15"
@@ -57,15 +57,15 @@ function PasswordReset() {
                   onChange={(e) => handleChange(e)}
                   value={passwordReset.email}
                   // id="sign-in-email"
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Your email"
                 />
               </div>
             </div>
 
-            <div class="flex flex-col mb-6">
-              <div class="flex relative ">
-                <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+            <div className="flex flex-col mb-6">
+              <div className="flex relative ">
+                <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                   <svg
                     width="15"
                     height="15"
@@ -82,15 +82,15 @@ function PasswordReset() {
                   name="newPassword"
                   value={passwordReset.newPassword}
                   onChange={(e) => handleChange(e)}
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="New password"
                 />
               </div>
             </div>
 
-            <div class="flex flex-col mb-6">
-              <div class="flex relative ">
-                <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+            <div className="flex flex-col mb-6">
+              <div className="flex relative ">
+                <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                   <svg
                     width="15"
                     height="15"
@@ -107,17 +107,17 @@ function PasswordReset() {
                   name="confirmPassword"
                   value={passwordReset.confirmPassword}
                   onChange={(e) => handleChange(e)}
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Confirm password"
                 />
               </div>
             </div>
 
-            <div class="flex w-full">
+            <div className="flex w-full">
               <button
                 type="submit"
                 onClick={(e) => passwordReset(e)}
-                class="py-2 px-4  bg-gray-800 hover:bg-gray-950  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                className="py-2 px-4  bg-gray-800 hover:bg-gray-950  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
               >
                 Reset Password
               </button>

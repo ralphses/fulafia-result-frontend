@@ -27,7 +27,7 @@ function AddDeprtment() {
         );
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       });
   });
 
@@ -65,10 +65,10 @@ function AddDeprtment() {
       DepartmentService.add(department)
         .then((response) => {
           navigate("/departments");
-          console.log(response.status);
+          //console.log(response.status);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         });
     }
   };

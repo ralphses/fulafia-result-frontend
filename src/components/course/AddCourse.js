@@ -21,18 +21,18 @@ function AddCourse() {
   const handleCourseSubmit = (e) => {
     e.preventDefault();
 
-    console.log(course);
+    //console.log(course);
 
     CourseService.add(course)
       .then((response) => {
-        console.log(response.status);
+        //console.log(response.status);
 
         if (response.status === 200) {
           navigate("/course");
         }
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       });
   };
   return (

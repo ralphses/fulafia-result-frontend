@@ -26,9 +26,9 @@ function AllDepartment() {
 
         setAllDepartments(newDepts);
 
-        // console.log(data.data[0].courses[0].code);
+        // //console.log(data.data[0].courses[0].code);
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     };
     fetchData();

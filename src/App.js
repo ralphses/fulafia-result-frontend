@@ -22,7 +22,7 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
-        <Routes>
+        <Routes >
           <Route
             exact
             path="/"

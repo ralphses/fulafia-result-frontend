@@ -32,7 +32,7 @@ function AddStudent() {
         );
         setAllCourses(courses);
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     };
 
@@ -43,7 +43,7 @@ function AddStudent() {
         );
         setAllDepartments(response.data);
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
     };
 
@@ -67,7 +67,7 @@ function AddStudent() {
         navigate(successUrl);
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 
@@ -80,7 +80,7 @@ function AddStudent() {
       courses.push(e.target.value);
       setStudent({ ...student, courses: courses });
 
-      console.log(student.courses);
+      //console.log(student.courses);
     } else {
       const value = e.target.value;
 
@@ -192,7 +192,7 @@ function AddStudent() {
                   onChange={studentDetailsChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 >
-                  <option selected>Select Level</option>
+                  <option defaultValue={""}>Select Level</option>
                   <option value="FRESHMAN">FRESHMAN</option>
                   <option value="DIRECT ENTRY">DIRECT ENTRY</option>
                 </select>
@@ -204,7 +204,7 @@ function AddStudent() {
 
               <div className="flex flex-wrap">
                 {allCourses.map((course) => (
-                  <div className="flex items-center mb-4 mr-3">
+                  <div className="flex items-center mb-4 mr-3" key={course}>
                     <input
                       id="default-checkbox"
                       type="checkbox"

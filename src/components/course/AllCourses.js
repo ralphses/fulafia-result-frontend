@@ -15,7 +15,7 @@ function AllCourses() {
         const response = await CourseService.all(1);
         setCourses(response.data.responseBody.courses);
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       }
       setLoading(false);
     };

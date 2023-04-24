@@ -25,22 +25,22 @@ const Login = () => {
       }
 
     }).catch((error) => {
-      console.log(error);
+      //console.log(error);
     });
   }
 
   return (
 
     <div className="items-center justify-center mt-20 min-h-screen flex flex-col">
-      <div class="flex flex-col w-full flex-grow px-2 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
-        <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
+      <div className="flex flex-col w-full flex-grow px-2 py-8 bg-white rounded-xl shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10 items-center">
+        <div className="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
           Admin Login
         </div>
-        <div class="mt-8">
+        <div className="mt-8">
           <form action="#" autoComplete="off">
-            <div class="flex flex-col mb-2">
-              <div class="flex relative ">
-                <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+            <div className="flex flex-col mb-2">
+              <div className="flex relative ">
+                <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                   <svg
                     width="15"
                     height="15"
@@ -56,15 +56,15 @@ const Login = () => {
                   id="sign-in-email"
                   name="email"
                   value={loginRequest.email}
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Your email"
                   onChange={(e) => handleOnchange(e)}
                 />
               </div>
             </div>
-            <div class="flex flex-col mb-6">
-              <div class="flex relative ">
-                <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+            <div className="flex flex-col mb-6">
+              <div className="flex relative ">
+                <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                   <svg
                     width="15"
                     height="15"
@@ -80,27 +80,27 @@ const Login = () => {
                   id="sign-in-email"
                   name="password"
                   value={loginRequest.password}
-                  class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                   placeholder="Your password"
                   onChange={(e) => handleOnchange(e)}
                 />
               </div>
             </div>
-            <div class="flex items-center mb-6 -mt-4">
-              <div class="flex ml-auto">
+            <div className="flex items-center mb-6 -mt-4">
+              <div className="flex ml-auto">
                 <a
                   href="/password-reset"
-                  class="inline-flex text-xs font-thin text-gray-500 sm:text-sm dark:text-gray-100 hover:text-gray-700 dark:hover:text-white"
+                  className="inline-flex text-xs font-thin text-gray-500 sm:text-sm dark:text-gray-100 hover:text-gray-700 dark:hover:text-white"
                 >
                   Forgot Your Password?
                 </a>
               </div>
             </div>
-            <div class="flex w-full">
+            <div className="flex w-full">
               <button
                 type="submit"
                 onClick={loginAdmin}
-                class="py-2 px-4  bg-gray-800 hover:bg-gray-950  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                className="py-2 px-4  bg-gray-800 hover:bg-gray-950  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
               >
                 Login
               </button>
