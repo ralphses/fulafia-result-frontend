@@ -95,6 +95,12 @@ function AllStudent() {
                   >
                     Courses
                   </th>
+                  <th
+                    scope="col"
+                    className="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+                  >
+                    Actions
+                  </th>
                 </tr>
               </thead>
               {!loading && (
@@ -136,6 +142,9 @@ function AllStudent() {
                         <p className="text-gray-900 whitespace-no-wrap">
                           {student.courses.map((course) => `${course} `)}
                         </p>
+                      </td>
+                      <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                       <button className="rounded bg-emerald-800 text-white py-2 px-2" onClick={() => navigate(`/student/view?matric=${student.matric}`)}>View</button>
                       </td>
                     </tr>
                   ))}

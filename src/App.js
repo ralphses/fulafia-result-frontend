@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import AddStudent from "./components/student/AddStudent";
 import UploadResult from "./components/result/UploadResult";
 import AddStudentSuccess from "./components/student/AddStudentSuccess";
+import Student from "./components/student/Student";
 
 function App() {
   const isLoggedIn = localStorage.getItem("loogedIn");
@@ -63,6 +64,11 @@ function App() {
             exact
             path="/student"
             element={isLoggedIn ? <AllStudent /> : <Login />}
+          ></Route>
+          <Route
+            exact
+            path="/student/view"
+            element={isLoggedIn ? <Student /> : <Login />}
           ></Route>
           <Route
             exact
