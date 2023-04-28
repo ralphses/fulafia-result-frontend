@@ -5,7 +5,6 @@ import { useLocation, useNavigate } from "react-router";
 function Student() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [loaded, setLoaded] = useState(false);
 
   const [student, setStudent] = useState({
     department: "s",
@@ -40,7 +39,6 @@ function Student() {
           setCourses(studentCourses);
 
         //   setStudent({ ...student, courses: studentCourses });
-          setLoaded(true);
         }
       } catch (error) {
         console.log(error);
