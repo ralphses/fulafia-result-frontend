@@ -7,7 +7,6 @@ function Student() {
   const location = useLocation();
 
   const [student, setStudent] = useState({
-    department: "s",
     department: "",
     matric: "",
     passCode: "",
