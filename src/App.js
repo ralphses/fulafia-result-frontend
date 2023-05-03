@@ -15,6 +15,8 @@ import AddStudent from "./components/student/AddStudent";
 import UploadResult from "./components/result/UploadResult";
 import AddStudentSuccess from "./components/student/AddStudentSuccess";
 import Student from "./components/student/Student";
+import NewSession from "./components/NewSession";
+import RegisterNewCourses from "./components/student/RegisterNewCourses";
 
 function App() {
   const isLoggedIn = localStorage.getItem("loogedIn");
@@ -28,6 +30,11 @@ function App() {
             exact
             path="/"
             element={isLoggedIn ? <Home /> : <Login />}
+          ></Route>
+           <Route
+            exact
+            path="/session/new"
+            element={isLoggedIn ? <NewSession /> : <Login />}
           ></Route>
           <Route exact path="/login" element={<Login />}></Route>
           <Route
@@ -74,6 +81,11 @@ function App() {
             exact
             path="/student/add"
             element={isLoggedIn ? <AddStudent /> : <Login />}
+          ></Route>
+           <Route
+            exact
+            path="/student/add-courses"
+            element={isLoggedIn ? <RegisterNewCourses /> : <Login />}
           ></Route>
             <Route
             exact

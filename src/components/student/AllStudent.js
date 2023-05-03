@@ -144,7 +144,22 @@ function AllStudent() {
                         </p>
                       </td>
                       <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                       <button className="rounded bg-emerald-800 text-white py-2 px-2" onClick={() => navigate(`/student/view?matric=${student.matric}`)}>View</button>
+                        <button
+                          className="rounded bg-emerald-800 text-white py-2 px-2 mb-2 mr-2"
+                          onClick={() =>
+                            navigate(`/student/view?matric=${student.matric}`)
+                          }
+                        >
+                          View Record
+                        </button>
+                        <button
+                          className="rounded bg-blue-800 text-white py-2 px-2"
+                          onClick={() =>
+                            navigate(`/student/add-courses?matric=${student.matric}&department=${student.department}`)
+                          }
+                        >
+                          Add Courses
+                        </button>
                       </td>
                     </tr>
                   ))}

@@ -80,7 +80,6 @@ function AddStudent() {
       courses.push(e.target.value);
       setStudent({ ...student, courses: courses });
 
-      //console.log(student.courses);
     } else {
       const value = e.target.value;
 
