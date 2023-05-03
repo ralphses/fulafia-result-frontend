@@ -64,11 +64,11 @@ function Student() {
           </h3>
           <h3 className="font-bold text-black">
             {" "}
-            Student Certificate Verification Number: {student.resultCode}
+            Student Certificate Verification Number: {student.passCode}
           </h3>
           <h3 className="font-bold text-black">
             {" "}
-            Student Result Passcode: {student.passCode}
+            Student Result Passcode: {student.resultCode}
           </h3>
           <h3 className="font-bold text-black mb-4">
             {" "}
