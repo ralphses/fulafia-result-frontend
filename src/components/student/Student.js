@@ -27,7 +27,7 @@ function Student() {
         const matric = params.get("matric");
 
         const studentResponse = await axios.get(
-          `https://fulafia-result-backend-production.up.railway.app/api/v1/student/find/${matric}`
+          `https://fulafia-result-backend-production.up.railway.app/api/v1/student/find?matric=${matric}`
         );
 
         if (studentResponse.status === 200) {
