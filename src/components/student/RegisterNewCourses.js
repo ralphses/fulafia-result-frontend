@@ -26,19 +26,17 @@ function RegisterNewCourses() {
     }
   };
 
-  const handleSubmit =  async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(
-        `https://fulafia-result-backend-production.up.railway.app/api/v1/student/register/course/${params.get(
-          "matric"
-        )}`,
-        { courses: selectedCourses }
+        `https://fulafia-result-backend-production.up.railway.app/api/v1/student/register/course`,
+        { courses: selectedCourses, matric: params.get("matric") }
       );
 
-      if(response.status === 200) {
-        navigate('/student');
+      if (response.status === 200) {
+        navigate("/student");
       }
     } catch (error) {
       console.log(error);
@@ -59,8 +57,8 @@ function RegisterNewCourses() {
             (course) => course.code
           );
 
-          if(courses.length < 1) {
-            navigate('/student');
+          if (courses.length < 1) {
+            navigate("/student");
           }
           setAvailableCourses(courses);
         }
