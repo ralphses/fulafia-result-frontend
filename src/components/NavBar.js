@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import logo from "../ful3.png";
 // Initialization for ES Users
 import { Collapse, Ripple, initTE } from "tw-elements";
 
