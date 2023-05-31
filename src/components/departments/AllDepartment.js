@@ -52,7 +52,7 @@ function AllDepartment() {
         <div className="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
           <div className="inline-block min-w-full overflow-hidden rounded-lg shadow">
             <table className="min-w-full leading-normal">
-              <thead className="bg-yellow-700">
+              <thead className="bg-blue-800">
                 <tr>
                   <th
                     scope="col"

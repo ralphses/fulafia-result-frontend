@@ -41,7 +41,7 @@ function AllStudent() {
         </div>
         <div className="h-12">
           <button
-            className="rounded bg-yellow-700 text-white py-2 px-2"
+            className="rounded bg-blue-800 text-white py-2 px-2"
             onClick={() => navigate("/student/add")}
           >
             Add New Student

@@ -11,19 +11,21 @@ function NewSession() {
   };
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
 
     try {
-        console.log(newSession);
-        const response = await axios.post('https://fulafia-result-backend-production.up.railway.app/api/v1/initialize/', newSession);
-        if(response.status === 200) {
-            navigate('/');
-        }
+      console.log(newSession);
+      const response = await axios.post(
+        "https://fulafia-result-backend-production.up.railway.app/api/v1/initialize/",
+        newSession
+      );
+      if (response.status === 200) {
+        navigate("/");
+      }
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div className="flex items-center justify-center mt-20">

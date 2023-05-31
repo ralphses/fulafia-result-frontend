@@ -199,7 +199,7 @@ function UploadResult() {
               <button
                 type="submit"
                 onClick={(e) => saveStudentResult(e)}
-                className="py-2 px-4  bg-yellow-700 hover:bg-white hover:text-yellow-700  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+                className="py-2 px-4  bg-blue-800 hover:bg-white hover:text-yellow-700  text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
               >
                 Upload Result
               </button>

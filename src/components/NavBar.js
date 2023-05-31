@@ -17,20 +17,13 @@ function Navbar() {
 
   return (
     <nav
-      className="relative flex w-full items-end justify-between bg-yellow-700 py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+      className="relative flex w-full items-end justify-between bg-blue-800 py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
       data-te-navbar-ref
     >
       <div className="flex w-full flex-wrap text-white items-end justify-between px-3">
         <div className="flex items-center flex-shrink-0 text-white mr-20">
-          <a href="/">
-            <img
-              src={logo}
-              alt="Logo"
-              className="bg-white rounded-full px-1 py-1 h-12 w-12 mr-2"
-            />
-          </a>
           <span className="font-semibold text-white tracking-tight">
-            FEDERAL UNIVERSITY OF LAFIA
+            A SCHOOL UNIVERSITY
           </span>
         </div>
         <div className="float-right">

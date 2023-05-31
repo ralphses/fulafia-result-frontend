@@ -5,7 +5,7 @@ import PasswordReset from "./components/auth/PasswordReset";
 import AddCourse from "./components/course/AddCourse";
 import AddDeprtment from "./components/departments/AddDeprtment";
 import AllDepartment from "./components/departments/AllDepartment";
-import Department from "./components/departments/Department";
+// import Department from "./components/departments/Department";
 import NavBar from "./components/NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AllCourses from "./components/course/AllCourses";
@@ -47,11 +47,11 @@ function App() {
             path="/departments"
             element={isLoggedIn ? <AllDepartment /> : <Login />}
           ></Route>
-          <Route
+          {/* <Route
             exact
             path="/departments/view"
             element={isLoggedIn ? <Department /> : <Login />}
-          ></Route>
+          ></Route> */}
           <Route
             exact
             path="/departments/add"
