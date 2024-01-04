@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+    "username": "usernassssssssssme",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:8080/api/v1/report/handle
+Content-Type: application/x-www-form-urlencoded
+
+text=""&serviceCode=566&networkCode=345&phoneNumber=+2347035002025&sessionId=6838382726373

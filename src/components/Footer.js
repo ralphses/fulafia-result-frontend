@@ -9,7 +9,7 @@ function Footer() {
           className="text-white dark:text-neutral-400"
           href="/"
         >
-          FULafia Result System
+          FULafia Crime Report Application 
         </a>
       </div>
     </footer>

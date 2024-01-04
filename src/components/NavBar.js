@@ -1,118 +1,90 @@
-import React from "react";
-import { useNavigate } from "react-router";
-// Initialization for ES Users
-import { Collapse, Ripple, initTE } from "tw-elements";
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-function Navbar() {
-  initTE({ Collapse, Ripple });
-  const navigate = useNavigate();
+const navigation = [
+  { name: 'Report Crime', href: '/', current: true },
+  { name: 'New Scene', href: '/new-crime-scene', current: false },
+];
 
-  const logout = () => {
-    localStorage.removeItem("loogedIn");
-    navigate("/login");
-  };
 
-  const isLoggedIn = localStorage.getItem("loogedIn");
-
-  return (
-    <nav
-      className="relative flex w-full items-end justify-between bg-blue-800 py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
-      data-te-navbar-ref
-    >
-      <div className="flex w-full flex-wrap text-white items-end justify-between px-3">
-        <div className="flex items-center flex-shrink-0 text-white mr-20">
-          <span className="font-semibold text-white tracking-tight">
-            A SCHOOL UNIVERSITY
-          </span>
-        </div>
-        <div className="float-right">
-          <button
-            className="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
-            type="button"
-            data-te-collapse-init
-            data-te-target="#navbarSupportedContentY"
-            aria-controls="navbarSupportedContentY"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="[&>svg]:w-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="h-7 w-7"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </span>
-          </button>
-        </div>
-
-        <div
-          className="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto"
-          id="navbarSupportedContentY"
-          data-te-collapse-item
-        >
-          <ul
-            className="mr-auto flex flex-col lg:flex-row"
-            data-te-navbar-nav-ref
-          >
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <button
-                className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-                onClick={() => navigate("/")}
-                data-te-nav-link-ref
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                Home
-              </button>
-            </li>
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <button
-                className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-                onClick={() => navigate("/student")}
-                data-te-nav-link-ref
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                Students
-              </button>
-            </li>
-            <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <button
-                className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-                onClick={() => navigate("/course")}
-                data-te-nav-link-ref
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                Courses
-              </button>
-            </li>
-            <li className="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <a
-                className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-                href={isLoggedIn ? "/" : "/login"}
-                onClick={logout}
-                data-te-nav-link-ref
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                {isLoggedIn ? "Logout" : "Login"}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
 }
 
-export default Navbar;
+const handleLogout = () => {
+  // Handle the logout action here
+  localStorage.setItem("auth", false);
+  
+  // Add any additional steps for logging out (e.g., redirect to the login page)
+  window.location.href = '/login'; // Uncomment this line if you want to redirect after logout
+};
+
+const handleLogin = () => {
+  // Add any additional steps for logging out (e.g., redirect to the login page)
+  window.location.href = '/login'; // Uncomment this line if you want to redirect after logout
+};
+
+export default function Navigation() {
+  return (
+    <Disclosure as="nav" className="bg-gray-800">
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="relative flex h-16 items-center justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-center">
+                </div>
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {localStorage.getItem("auth") === "true" && (
+                  <button
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                )}
+                {localStorage.getItem("auth") === "false" && (
+                  <button
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    onClick={handleLogin}
+                  >
+                    Login
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </Disclosure>
+  )
+}
